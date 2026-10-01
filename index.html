@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstellar Typing | Xolmurodov.M.B</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="blackhole"></div>
+
+  <main>
+    <!-- 1. Kirish ekrani -->
+    <section id="screen-start" class="screen active">
+      <h1 data-i18n="title"></h1>
+      <p class="sub" data-i18n="welcome"></p>
+      <div class="langs">
+        <button class="lang active" data-lang="uz">🇺🇿 O'zbekcha</button>
+        <button class="lang" data-lang="ru">🇷🇺 Русский</button>
+        <button class="lang" data-lang="en">🇬🇧 English</button>
+      </div>
+      <input id="name" maxlength="20" autocomplete="off" data-i18n-ph="namePh">
+      <button id="btn-next" class="btn" data-i18n="next"></button>
+    </section>
+
+    <!-- 2. Tezlik tanlash -->
+       <!-- 2. Tezlik tanlash -->
+    <section id="screen-speed" class="screen">
+      <button class="btn-back" data-back="screen-start" data-i18n="back"></button>
+      <h2 id="hello"></h2>
+      <p class="sub" data-i18n="choose"></p>
+      <div class="speeds">
+        <button class="speed" data-speed="slow">
+          <span class="emoji">🐢</span><b data-i18n="slow"></b><small data-i18n="slowD"></small>
+        </button>
+        <button class="speed" data-speed="medium">
+          <span class="emoji">🚀</span><b data-i18n="medium"></b><small data-i18n="mediumD"></small>
+        </button>
+        <button class="speed" data-speed="fast">
+          <span class="emoji">⚡</span><b data-i18n="fast"></b><small data-i18n="fastD"></small>
+        </button>
+      </div>
+    </section>
+
+    <!-- 3. O'yin -->
+    <section id="screen-game" class="screen">
+      <button class="btn-back" data-back="screen-speed" data-i18n="back"></button>
+      <div class="hud">
+        <div><small data-i18n="time"></small><b id="time">120</b></div>
+        <div><small data-i18n="score"></small><b id="score">0</b></div>
+        <div><small data-i18n="words"></small><b id="words">0</b></div>
+      </div>
+      <div id="word"></div>
+      <input id="typing" autocomplete="off" autocapitalize="off" spellcheck="false" data-i18n-ph="typePh">
+      <div id="toast"></div>
+    </section>
+
+    <!-- 4. Natija -->
+    <section id="screen-result" class="screen">
+      <button class="btn-back" data-back="screen-speed" data-i18n="back"></button>
+      <h2 data-i18n="resultTitle"></h2>
+      <p id="final-msg" class="sub"></p>
+      <div class="stats">
+        <div><small data-i18n="score"></small><b id="r-score">0</b></div>
+        <div><small data-i18n="words"></small><b id="r-words">0</b></div>
+        <div><small>WPM</small><b id="r-wpm">0</b></div>
+      </div>
+      <button id="btn-again" class="btn" data-i18n="again"></button>
+    </section>
+  </main>
+</min>
+
+  <div class="author">© Xolmurodov.M.B</div>
+
+  <script src="script.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>
